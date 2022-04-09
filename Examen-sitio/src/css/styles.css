@@ -1,0 +1,259 @@
+/*Colores*/
+:root{
+    --color-blue: #4672da;
+    --color-white: #ffffff;
+    --color-yellow: #f0841a;
+    --color-black: #000000;
+    --color-green: #21ba36;
+    --color-hand: #fee879;
+    --color-title: #142348;
+}
+/* Configuracion inicial*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.container--xlg{
+    max-width: 1600px;
+}
+.container--lg{
+    max-width: 1450px;
+}
+.container--md{
+    max-width: 1380px;
+}
+a{
+    text-decoration: none;
+}
+.bars{
+    display: none;
+}
+.pd-5{
+    padding: 60px 0;
+}
+.btn{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    padding: 1em 5em;
+    border-radius: 50px;
+}
+.btn .fa-hand-point-right{
+    color: var(--color-hand);
+    margin-right: 15px;
+}
+h1{
+    font-weight: 400;
+}
+h1>span{
+    font-weight: 600;
+}
+
+/*Header*/
+.header-top{
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    font-weight: 400;
+}
+.header-button{
+    color: var(--color-black);
+    padding: 10px 0;
+}
+.score{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.score__star{
+    margin: 0 15px;
+}
+.score__star .fa-star{
+    color: var(--color-yellow);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+.main-menu{
+    display: flex;
+    align-items: center;
+}
+.main-menu i{
+    color: var(--color-blue);
+    padding: 0 15px;
+    font-size: 1.5em;
+}
+.nav-menu ul li{
+    display: inline-block;
+    padding: 10px 20px;
+}
+.nav-menu ul li a{
+    color: var(--color-black);
+}
+
+/*Hero*/
+.hero{
+    background-image: url(../img/bg-hero-1.png), url(../img/bg-hero-2.png);
+    background-position: right, left;
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+}
+.hero__enterprises{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.hero__enterprises img{
+    max-width: 100px;
+    padding: 15px;
+}
+.hero__content{
+    max-width: 550px;
+    padding: 0 20px 0 20px;
+}
+.btn--lg{
+    padding: 1em 11em;
+}
+.content{
+    padding-bottom: 40px;
+    color: var(--color-title);
+}
+.content--ln{
+    line-height: 1.5;
+}
+.content ul{
+    margin-bottom: 60px;
+}
+.content ul li{
+    list-style: circle;
+    font-size: 1.5em;
+}
+.personal{
+    display: flex;
+}
+.name__verified{
+    display: flex;
+    align-items: center;
+}
+.name__verified h6 {
+    font-size: 1em;
+    margin: 0 16px;
+}
+.name__stars{
+    margin: 0 16px;
+}
+.name__stars i{
+    color: var(--color-yellow);
+}
+/*entreprises*/
+.enterprises{
+    filter: grayscale(100%);
+    text-align: center;
+}
+.enterprises__imgs>img{
+    padding: 15px;
+}
+/*About*/
+.w-sm{
+    max-width: 720px;
+    text-align: center;
+}
+.about{
+    color: var(--color-white);
+    background: url(../img/bg-about.png) no-repeat center;
+    background-color: #4672da;
+    padding-bottom: 90px;
+}
+.about__text{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+.about__text p{
+    display: inline;
+    max-width: 650px;
+}
+/*Drops*/
+.drops{
+    padding-bottom: 90px;
+}
+.drops__title{
+    color: var(--color-blue);
+}
+.circle{
+    background-color: var(--color-title);
+    color: var(--color-white);
+    padding: 20px 25px;
+    border-radius: 30px;
+}
+h4{
+    color: var(--color-blue);
+    padding: 20px 0;
+}
+.cards{
+    display: grid;
+    gap: 2em;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+}
+.card{
+    text-align: center;
+    padding: 60px 0;
+}
+/*footer*/
+.copy{
+    display: flex;
+    align-items: center;
+}
+@media (hover:hover){
+    .nav-menu ul li:hover{
+        border: 2px solid var(--color-title);
+    }
+    .btn:hover{
+        background-color: var(--color-title);
+    }
+}
+@media (max-width: 680px){
+    .main-menu .nav-menu{
+        position: absolute;
+        background-color: var(--color-blue);
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 2;
+        transform: translateX(-400px);
+        transition: transform .5s ease-in-out;
+    }
+    .nav-menu ul li a{
+        color: var(--color-white);
+        font-size: 1.4em;
+        line-height: 4;
+    }
+    .main-menu .nav-menu.show{
+        transform: translateX(-20px);
+    }
+    .bars{
+        text-align: end;
+        width: 200px;
+        display: block;
+        font-size: 2em;
+    }
+    .hero__medicines{
+        display: none;
+    }
+    .btn--lg{
+        padding: 1rem 4rem;
+    }
+}
